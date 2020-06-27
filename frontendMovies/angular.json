@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontendMovies"
+    }
+  },
+  "defaultProject": "frontendMovies",
+  "cli": {
+    "analytics": false
+  }
 }
