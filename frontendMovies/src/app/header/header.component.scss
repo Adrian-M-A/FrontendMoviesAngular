@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 4rem;
+}
+
+a {
+    color: white;
+    padding: 1rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link, a:visited, a:active, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: rgb(0, 247, 185);
+}
+
+input{
+    border: 0.15rem solid rgb(92, 92, 92);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+}
+
+
+#entraLink{
+    margin-right:1rem ;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    border: 0.15rem solid rgb(92, 92, 92);
+}
+
+#registroNavegador{
+    margin-right:1rem ;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    border: 0rem solid rgb(92, 92, 92);
+    background-color: rgb(0, 247, 185);
+    color: black
+}
+

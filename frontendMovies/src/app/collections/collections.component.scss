@@ -1,0 +1,59 @@
+.collections{
+    background-color: rgb(15, 15, 15);
+    height: 50rem;
+    h3{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(15, 15, 15);
+        color: white;
+        margin-top: 0rem;
+        font-weight: bold;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(15, 15, 15);
+        color: white;
+        margin-top: -1rem;
+        font-weight: bold;
+        color: rgb(163, 163, 163);
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+a:link, a:visited, a:active, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.collectionsBillboard{
+    display: flex;
+    justify-content: center;
+}
+#popular, #mostVoted, #comedy{
+    height: 20rem;
+    padding: 1rem;
+}
+#popular:hover, #mostVoted:hover, #comedy:hover{
+    filter: blur(2px);
+}
+
+#popularWord, #votedWord, #comedyWord{
+    margin-top: -3rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#popularWord{
+    margin-left: 27rem;
+}
+
+#votedWord{
+    margin-left: 25rem;
+}
+
+#comedyWord{
+    margin-left: 25rem;
+}
