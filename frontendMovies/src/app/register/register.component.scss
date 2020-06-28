@@ -1,0 +1,73 @@
+#registerBody{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 55rem;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    
+}
+article{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+    height: 20rem;
+    background-color: black;
+    padding: 3rem;
+    margin-top: 3rem;
+    color: white;
+    font-weight: bolder;
+    border: 1rem solid rgb(0, 247, 185);
+    border-radius: 1rem;
+}
+
+#registerMessage{
+    color:rgb(0, 247, 185);
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 2rem;
+}
+
+#firstLine, #secondLine, #thirdLine, #fourthLine{
+    display: flex;
+   
+
+}
+
+#name, #surname, #date, #document, #email, #password{
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    padding: 1rem;
+}
+
+#name{
+    width: 9rem;
+}
+
+#surname{
+    width: 15rem;
+}
+
+#date {
+    display: flex;
+    justify-items: center;
+    width: 15rem;
+    
+}
+#day{
+    width: 4rem;
+}
+
+#month, #year{
+    width: 5rem;
+}
+
+#document{
+    margin-top: 1rem;
+}
+
+

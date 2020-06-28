@@ -8,10 +8,7 @@ import { Observable } from 'rxjs';
 
 export class MovieService {
 
-  apiKey='210d6a5dd3f16419ce349c9f1b200d6d';
-  apiUrl='https://api.themoviedb.org/3/';
-
-  backendURL="https://localhost:3000/film/";
+  backendURL="http://localhost:3000/film/";
   
   films: object[];
   choosenFilm: object[];
@@ -19,8 +16,27 @@ export class MovieService {
   constructor(private HttpClient:HttpClient) { }
 
   getFilms():Observable<any>{
-    // return this.HttpClient.get(this.backendURL + "allfilms")
-    return this.HttpClient.get(this.apiUrl + 'movie/popular?api_key=' + this.apiKey + '&language=es-ES&page=1')
+    return this.HttpClient.get(this.backendURL + "allfilms")
+  }
+
+  getPopularFilms():Observable<any>{
+    return this.HttpClient.get(this.backendURL + "popularfilms")
+  }
+
+  getVotedFilms():Observable<any>{
+    return this.HttpClient.get(this.backendURL + "votedfilms")
+  }
+
+  getEigthyFilms():Observable<any>{
+    return this.HttpClient.get(this.backendURL + "eightyfilms")
+  }
+
+  getNinetyFilms():Observable<any>{
+    return this.HttpClient.get(this.backendURL + "ninetyfilms")
+  }
+
+  getZGenerationFilms():Observable<any>{
+    return this.HttpClient.get(this.backendURL + "zgenerationfilms")
   }
 
   locateFilm(filmChoose:object[]):object{
