@@ -1,5 +1,14 @@
 <div class="votedCollection">
     <h3>+Votadas</h3>
     <p id="subtitle">Las películas más votadas por nuestros cinéfilos</p>
-    
+    <div class="movies">
+        <div *ngFor="let pelicula of showMovies" class="movie">
+            <a routerLink="/detail" routerLinkActive="active-link">
+            <img width="200"height="288" (click)="MovieService.locateFilm(pelicula)"
+                src="https://image.tmdb.org/t/p/w200{{pelicula.PosterPath}}" 
+                alt="poster">
+            </a>
+            <p>{{pelicula.Title}}</p>
+        </div>
+    </div>
 </div>

@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { EightyCollectionComponent } from './eighty-collection/eighty-collection.component';
 import { NinetyCollectionComponent } from './ninety-collection/ninety-collection.component';
 import { ZGenerationCollectionComponent } from './z-generation-collection/z-generation-collection.component';
+import { SearchedFilmsComponent } from './searched-films/searched-films.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ZGenerationCollectionComponent } from './z-generation-collection/z-gene
     EightyCollectionComponent,
     NinetyCollectionComponent,
     ZGenerationCollectionComponent,
+    SearchedFilmsComponent,
     
   ],
   imports: [

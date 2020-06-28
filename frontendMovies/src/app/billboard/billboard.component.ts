@@ -14,7 +14,7 @@ export class BillboardComponent implements OnInit {
 
     //Al inicio del componente llama al servicio para realizar la función getFilms y conectar con Endpoint que ofrece todas las películas
   ngOnInit(){
-    this.MovieService.getFilms()
+    this.MovieService.getAllFilms()
     .subscribe(
       res => this.showMovies = res,
       error => console.error(error)

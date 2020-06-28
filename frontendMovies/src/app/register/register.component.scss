@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 55rem;
+    height: 45rem;
     width: 100%;
     background-color: rgb(15, 15, 15);
     
@@ -14,7 +14,7 @@ article{
     flex-wrap: wrap;
     flex-direction: column;
     width: 25%;
-    height: 20rem;
+    height: 25rem;
     background-color: black;
     padding: 3rem;
     margin-top: 3rem;
@@ -33,11 +33,10 @@ article{
 
 #firstLine, #secondLine, #thirdLine, #fourthLine{
     display: flex;
-   
-
 }
 
-#name, #surname, #date, #document, #email, #password{
+#name, #surnames, #date, #document, 
+#email, #phone, #password{
     display: flex;
     flex-direction: column;
     height: 2rem;
@@ -48,26 +47,51 @@ article{
     width: 9rem;
 }
 
-#surname{
+#surnames{
     width: 15rem;
+    padding-left: 2rem;
 }
 
 #date {
-    display: flex;
-    justify-items: center;
-    width: 15rem;
-    
-}
-#day{
-    width: 4rem;
+    width: 12rem;   
 }
 
-#month, #year{
-    width: 5rem;
+#phone{
+    width: 9rem
+}
+#email{
+    padding-left: 2rem;
+    width: 15rem
 }
 
 #document{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    width: 13rem;
 }
 
+#sendRegister{
+    padding-top: 2rem;
+}
+
+#role{
+    padding-top: 1.5rem;
+}
+
+#registerButton{
+    margin-right:1rem ;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    font-weight: bolder;
+    border: 0.15rem solid rgb(0, 247, 185);
+    background-color: rgb(0, 247, 185);
+}
+
+#registerButton:hover, #registerButton:focus, #registerButton:active {
+    background-color: black;
+    color:white;
+    outline: none;
+    text-decoration: none;
+}
 

@@ -1,0 +1,16 @@
+<div class="searchedFilm">
+    <h3>Búsqueda</h3>
+    <p id="subtitle">El resultado de tu búsqueda es:</p>
+    <div class="movies">
+        <div class="movie">
+            <div *ngFor="let pelicula of MovieService.getFilms()">
+                <a routerLink="/info" routerLinkActive="active-link">
+                    <img width="200"height="288" (click)="MovieService.locateFilm(pelicula)"
+                    src="https://image.tmdb.org/t/p/w200/{{pelicula.PosterPath}}" 
+                    alt="poster">
+                </a>
+                <p>{{pelicula.Title}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,7 +15,7 @@ export class MovieService {
 
   constructor(private HttpClient:HttpClient) { }
 
-  getFilms():Observable<any>{
+  getAllFilms():Observable<any>{
     return this.HttpClient.get(this.backendURL + "allfilms")
   }
 
@@ -39,6 +39,10 @@ export class MovieService {
     return this.HttpClient.get(this.backendURL + "zgenerationfilms")
   }
 
+  searchFilmsTitle(title:string):Observable<any>{
+    return this.HttpClient.get(this.backendURL + "filmsTitle/" + title)
+  }
+
   locateFilm(filmChoose:object[]):object{
     this.choosenFilm = filmChoose;
     console.log(this.choosenFilm);
@@ -49,7 +53,7 @@ export class MovieService {
     this.films = films;
   }
 
-  getfilms():object{
+  getFilms():object{
     return this.films
   }
 }
