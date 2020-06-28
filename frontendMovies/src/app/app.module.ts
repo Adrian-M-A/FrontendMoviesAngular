@@ -11,6 +11,11 @@ import { CollectionsComponent } from './collections/collections.component';
 import { PopularCollectionComponent } from './popular-collection/popular-collection.component';
 import { VotedCollectionComponent } from './voted-collection/voted-collection.component';
 import { ComedyCollectionComponent } from './comedy-collection/comedy-collection.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { EightyCollectionComponent } from './eighty-collection/eighty-collection.component';
+import { NinetyCollectionComponent } from './ninety-collection/ninety-collection.component';
+import { ZGenerationCollectionComponent } from './z-generation-collection/z-generation-collection.component';
 
 
 @NgModule({
@@ -23,6 +28,11 @@ import { ComedyCollectionComponent } from './comedy-collection/comedy-collection
     PopularCollectionComponent,
     VotedCollectionComponent,
     ComedyCollectionComponent,
+    RegisterComponent,
+    LoginComponent,
+    EightyCollectionComponent,
+    NinetyCollectionComponent,
+    ZGenerationCollectionComponent,
     
   ],
   imports: [

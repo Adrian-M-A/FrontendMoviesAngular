@@ -1,6 +1,32 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(15, 15, 15);
+    .movie{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0.5rem;
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        width: 15rem;
+        h2{
+            font-size: 1.2rem;
+        }
+        img{
+            border-radius:0.7rem;
+            width: 200px;
+        }
+        p{
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
 .popularCollection{
     background-color: rgb(15, 15, 15);
-    height: 50rem;
     h3{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         background-color: rgb(15, 15, 15);
@@ -14,10 +40,9 @@
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgb(15, 15, 15);
         color: white;
-        margin-top: -1rem;
+        margin-top: 1rem;
         font-weight: bold;
         color: rgb(163, 163, 163);
         padding-left: 1rem;
-        padding-bottom: 1rem;
     }
 }

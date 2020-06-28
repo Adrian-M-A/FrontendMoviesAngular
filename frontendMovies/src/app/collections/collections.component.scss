@@ -1,6 +1,7 @@
 .collections{
     background-color: rgb(15, 15, 15);
     height: 50rem;
+    padding: 1rem;
     h3{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         background-color: rgb(15, 15, 15);
@@ -29,31 +30,31 @@ a:link, a:visited, a:active, a:focus {
 
 .collectionsBillboard{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
-#popular, #mostVoted, #comedy{
+#popular, #mostVoted, #eighty, #ninety, #zgeneration{
     height: 20rem;
     padding: 1rem;
+    
 }
-#popular:hover, #mostVoted:hover, #comedy:hover{
+#collection1:hover, #collection2:hover, #collection3:hover, 
+#collection4:hover,#collection5:hover{
     filter: blur(2px);
 }
 
-#popularWord, #votedWord, #comedyWord{
+#popularWord, #votedWord, #eightyWord, #ninetyWord, #zgenerationWord{
     margin-top: -3rem;
     font-size: 1.5rem;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#popularWord{
-    margin-left: 27rem;
+#popularWord, #zgenerationWord{
+    margin-left: 28rem;
 }
 
-#votedWord{
+#votedWord, #eightyWord, #ninetyWord, #zgenerationWord{
     margin-left: 25rem;
 }
 
-#comedyWord{
-    margin-left: 25rem;
-}
