@@ -18,6 +18,8 @@ import { EightyCollectionComponent } from './eighty-collection/eighty-collection
 import { NinetyCollectionComponent } from './ninety-collection/ninety-collection.component';
 import { ZGenerationCollectionComponent } from './z-generation-collection/z-generation-collection.component';
 import { SearchedFilmsComponent } from './searched-films/searched-films.component';
+import { AdminComponent } from './admin/admin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { SearchedFilmsComponent } from './searched-films/searched-films.componen
     EightyCollectionComponent,
     NinetyCollectionComponent,
     ZGenerationCollectionComponent,
-    SearchedFilmsComponent
+    SearchedFilmsComponent,
+    AdminComponent,
+    ProfileComponent
     
   ],
   imports: [

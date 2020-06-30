@@ -10,7 +10,8 @@ import { NinetyCollectionComponent } from "./ninety-collection/ninety-collection
 import { ZGenerationCollectionComponent } from "./z-generation-collection/z-generation-collection.component"
 import { SearchedFilmsComponent } from "./searched-films/searched-films.component"
 import { RegisterComponent } from "./register/register.component"
-import { LoginComponent} from "./login/login.component"
+import { LoginComponent } from "./login/login.component"
+import { AdminComponent } from './admin/admin.component'
 
 
 const routes: Routes = [
@@ -24,7 +25,9 @@ const routes: Routes = [
   {path:"eightycollection", component:EightyCollectionComponent},
   {path:"ninetycollection", component:NinetyCollectionComponent},
   {path:"zgenerationcollection", component:ZGenerationCollectionComponent},
-  {path:"searchedfilms", component:SearchedFilmsComponent}
+  {path:"searchedfilms", component:SearchedFilmsComponent},
+  {path:"login", component:LoginComponent},
+  {path:"admin", component:AdminComponent}
 ];
 
 @NgModule({

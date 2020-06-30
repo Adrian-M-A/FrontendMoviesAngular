@@ -16,6 +16,10 @@ export class UserService {
     return this.HttpClient.post(this.backendURL + "signup", form);
   }
 
+  loginUser(log:object){
+    return this.HttpClient.post(this.backendURL + "login", log)
+  }
+
   deleteRegister(form:object){
     return this.HttpClient.post(this.backendURL + "drop", form);
   }

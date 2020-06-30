@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     }
     this.UserService.userRegister(this.userForm)
     .subscribe({
-      next: data => console.log("todo OK"),
+      next: data => alert ("Usuario registrado correctamente"),
       error: error => console.log(error)
     });    
   }
@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
         error += " The password must be longer than 8 characters. ";
       }
       //password contains symbol
-      //password contains mayus and minus
+      //password contains upper and lowercase
     } else {
       error += "The passwords don't match.";
     }

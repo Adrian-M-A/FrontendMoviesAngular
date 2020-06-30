@@ -1,1 +1,19 @@
-<p>login works!</p>
+<section id="loginBody">
+    <article id="login">
+        <div id="loginMessage">Introduce tus datos
+        </div> 
+        <div id="firstLine">
+            <div id="email">
+                <input type="email" name="emailInput" id="email" placeholder="Introduce tu email" [(ngModel)]="loginForm.Email">
+            </div>
+        </div>
+        <div id="secondLine">
+            <div id="password">
+                <input type="password" name="passwordInput" id="password" placeholder="Introduce tu contraseña" [(ngModel)]="loginForm.Password">
+            </div>
+        </div>
+        <div id="sendLogin">
+                <button type="submit" id="loginButton" (click)="sendLogin()">Entrar</button>
+        </div> 
+    </article>
+</section>
