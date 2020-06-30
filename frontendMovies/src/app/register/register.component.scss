@@ -56,25 +56,31 @@ article{
     width: 12rem;   
 }
 
-#phone{
-    width: 9rem
-}
-#email{
-    padding-left: 2rem;
-    width: 15rem
-}
-
 #document{
     margin-top: 0.5rem;
     width: 13rem;
 }
 
-#sendRegister{
-    padding-top: 2rem;
+#phone{
+    width: 9rem
 }
 
-#role{
-    padding-top: 1.5rem;
+#email{
+    padding-left: 2rem;
+    width: 15rem
+}
+
+#password {
+    width: 12rem;
+}
+
+#password2{
+    padding-top: 1rem;
+    width: 10rem;
+}
+
+#sendRegister{
+    padding-top: 2rem;
 }
 
 #registerButton{

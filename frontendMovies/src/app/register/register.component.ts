@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from "../user.service";
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -16,33 +15,46 @@ export class RegisterComponent implements OnInit {
     Phone:"",
     Email:"",
     Password:"",
-    Role:""
+    Role:"user"
   };
+  Password2:string;
   message="";
 
-  constructor(private UserService:UserService, private router:Router) { }
+  constructor(private UserService:UserService) { }
 
   ngOnInit(): void {
   }
 
   sendRegister(){
+    let error = this.validate();
+    if (error) {
+      alert(error);
+      return;
+    }
     this.UserService.userRegister(this.userForm)
-    .subscribe(
-      (res) => { 
-        if(res.Name){
-          this.message = "Bienvenido " + res.Name + ", ya estás registrado.";
-          setTimeout(() => {
-            //once register process is done, we wait with a delay and we go back to the display page.
-            this.router.navigate(['/display'])
-          }, 2500);
-        }else{
-          this.message = res.message;
-        }
-      },
-
-      error => console.error(error)
-    )
+    .subscribe({
+      next: data => console.log("todo OK"),
+      error: error => console.log(error)
+    });    
   }
 
+  validate(): string {
+    let error = "";
+    let regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
+
+    if (this.userForm.Password == this.Password2) {
+      if (this.userForm.Password.length < 8) {
+        error += " The password must be longer than 8 characters. ";
+      }
+      //password contains symbol
+      //password contains mayus and minus
+    } else {
+      error += "The passwords don't match.";
+    }
+    if (!this.userForm.Email.match(regexp)) {
+      error += "The email have an incorrect format.";
+    }
+    return error;
+  }
 }

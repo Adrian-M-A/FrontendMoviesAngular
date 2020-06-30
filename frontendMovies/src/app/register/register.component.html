@@ -4,42 +4,40 @@
         </div> 
         <div id="firstLine">
             <div id="name">
-                <input type="text" id="inputName" placeholder="Nombre">
+                <input type="text" id="inputName" placeholder="Nombre" [(ngModel)]="userForm.Name">
             </div>
             <div id="surnames">
-                <input type="text" placeholder="Apellidos">
+                <input type="text" placeholder="Apellidos" [(ngModel)]="userForm.Surnames">
             </div>
         </div>
         <div id="secondLine">
             <div id="date">Fecha de nacimiento
                 <div id="dateSelector">
-                    <input type="date" id="start" name="birthdate"
-                    value="2000-06-22">
+                    <input type="date" name="birthdate" value="2000-06-22" [(ngModel)]="userForm.Birthdate">
                 </div>
             </div>
             <div id="document">
-                <input type="text" placeholder="Documento de identificación"> 
+                <input type="text" placeholder="Documento de identificación" [(ngModel)]="userForm.Document"> 
             </div>
         </div>
         <div id="thirdLine">
             <div id="phone">
-                <input type="text" placeholder="Teléfono"> 
+                <input type="text" placeholder="Teléfono" [(ngModel)]="userForm.Phone"> 
             </div>
             <div id="email">
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" [(ngModel)]="userForm.Email">
             </div>
         </div>
         <div id="fourthLine">
             <div id="password"> 
-                <input type="text" placeholder="Contraseña"> 
+                <input type="text" placeholder="Contraseña" [(ngModel)]="userForm.Password"> 
             </div>
-            <div id="role">
-                <input type="radio" name="" id="admin">admin
-                <input type="radio" name="" id="user">user
+            <div id="password2">
+                <input type="text" placeholder="Repite tu contraseña" [(ngModel)]="Password2"> 
             </div>
         </div>
         <div id="sendRegister">
-            <button type="submit" id="registerButton">REGÍSTRATE</button>
+            <button type="submit" id="registerButton" (click)="sendRegister()">REGÍSTRATE</button>
         </div>       
     </article>
 </section>
