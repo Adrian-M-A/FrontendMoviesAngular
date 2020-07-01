@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { LoginComponent } from './login/login.component';
 import { EightyCollectionComponent } from './eighty-collection/eighty-collection.component';
 import { NinetyCollectionComponent } from './ninety-collection/ninety-collection.component';
 import { ZGenerationCollectionComponent } from './z-generation-collection/z-generation-collection.component';
+import { SearchedFilmsComponent } from './searched-films/searched-films.component';
+import { AdminComponent } from './admin/admin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -33,12 +37,16 @@ import { ZGenerationCollectionComponent } from './z-generation-collection/z-gene
     EightyCollectionComponent,
     NinetyCollectionComponent,
     ZGenerationCollectionComponent,
+    SearchedFilmsComponent,
+    AdminComponent,
+    ProfileComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

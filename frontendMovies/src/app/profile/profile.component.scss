@@ -1,4 +1,4 @@
-#loginBody{
+#profileBody{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -24,31 +24,66 @@ article{
     border-radius: 1rem;
 }
 
-#loginMessage{
+#profileMessage{
     color:rgb(0, 247, 185);
     font-size: x-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 2rem;
 }
 
-#firstLine, #secondLine{
+#firstLine, #secondLine, #thirdLine, #fourthLine{
     display: flex;
 }
 
-
-#email, #password{
+#name, #surnames, #date, #document, 
+#email, #phone, #password{
     display: flex;
     flex-direction: column;
     height: 2rem;
     padding: 1rem;
+}
+
+#name{
+    width: 9rem;
+}
+
+#surnames{
+    width: 15rem;
+    padding-left: 2rem;
+}
+
+#date {
+    width: 12rem;   
+}
+
+#document{
+    margin-top: 0.5rem;
+    width: 13rem;
+}
+
+#phone{
+    width: 9rem
+}
+
+#email{
+    padding-left: 2rem;
     width: 15rem
 }
 
-#sendLogin{
+#password {
+    width: 12rem;
+}
+
+#password2{
+    padding-top: 1rem;
+    width: 10rem;
+}
+
+#sendModifications{
     padding-top: 2rem;
 }
 
-#loginButton{
+#modifyButton{
     margin-right:1rem ;
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -59,7 +94,7 @@ article{
     background-color: rgb(0, 247, 185);
 }
 
-#loginButton:hover, #registerButton:focus, #registerButton:active {
+#registerButton:hover, #registerButton:focus, #registerButton:active {
     background-color: black;
     color:white;
     outline: none;
