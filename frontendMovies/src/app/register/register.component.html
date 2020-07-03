@@ -4,41 +4,42 @@
         </div> 
         <div id="firstLine">
             <div id="name">
-                <input type="text" id="inputName" placeholder="Nombre" Required (ngModel)="userForm.Name">
+                <input type="text" id="inputName" placeholder="Nombre" Required [(ngModel)]="userForm.Name">
             </div>
             <div id="surnames">
-                <input type="text" placeholder="Apellidos" Required (ngModel)="userForm.Surnames">
+                <input type="text" placeholder="Apellidos" Required [(ngModel)]="userForm.Surnames">
             </div>
         </div>
         <div id="secondLine">
             <div id="date">Fecha de nacimiento
                 <div id="dateSelector">
-                    <input type="date" name="birthdate" value="2000-06-22" Required (ngModel)="userForm.Birthdate">
+                    <input type="date" name="birthdate" value="2000-06-22" Required [(ngModel)]="userForm.Birthdate">
                 </div>
             </div>
             <div id="document">
-                <input type="text" placeholder="Documento de identificación" Required (ngModel)="userForm.Document"> 
+                <input type="text" placeholder="Documento de identificación" Required [(ngModel)]="userForm.Document"> 
             </div>
         </div>
         <div id="thirdLine">
             <div id="phone">
-                <input type="text" placeholder="Teléfono" Required (ngModel)="userForm.Phone"> 
+                <input type="text" placeholder="Teléfono" Required [(ngModel)]="userForm.Phone"> 
             </div>
             <div id="email">
-                <input type="text" placeholder="Email" Required (ngModel)="userForm.Email">
+                <input type="text" placeholder="Email" Required [(ngModel)]="userForm.Email">
             </div>
         </div>
         <div id="fourthLine">
             <div id="password"> 
-                <input type="text" placeholder="Contraseña" Required (ngModel)="userForm.Password"> 
+                <input type="text" placeholder="Contraseña" Required [(ngModel)]="userForm.Password"> 
             </div>
             <div id="password2">
-                <input type="text" placeholder="Repite tu contraseña" Required (ngModel)="Password2"> 
+                <input type="text" placeholder="Repite tu contraseña" Required [(ngModel)]="Password2"> 
             </div>
         </div>
         <div id="sendRegister">
             <button type="submit" id="registerButton" (click)="sendRegister()">REGÍSTRATE</button>
-            <p id="registerOK" *ngIf="" >Se ha registrado con éxito</p>
+                <!-- p id="registerOK" *ngIf="" >Se ha registrado con éxito</p>
+                <p id="registerWrong" *ngIf="" >Se ha registrado con éxito</p> -->
         </div>       
     </article>
 </section>

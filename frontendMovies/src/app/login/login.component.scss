@@ -57,11 +57,12 @@ article{
     font-weight: bolder;
     border: 0.15rem solid rgb(0, 247, 185);
     background-color: rgb(0, 247, 185);
+    
+    &:hover, &n:focus, &:active {
+        background-color: black;
+        color:white;
+        outline: none;
+        text-decoration: none;
+    }
 }
 
-#loginButton:hover, #registerButton:focus, #registerButton:active {
-    background-color: black;
-    color:white;
-    outline: none;
-    text-decoration: none;
-}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from "../services/user.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -18,25 +19,24 @@ export class RegisterComponent implements OnInit {
     Role:"user"
   };
   Password2:string;
-  messageWrong: string = "No puede registrarse con ese Email";
-  messageRight: string = "Se ha registrado con éxito";
-  notRegister="";
 
-  constructor(private UserService:UserService) { }
+  constructor(private UserService:UserService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
   sendRegister(){
+    console.log(this.userForm)
     this.UserService.userRegister(this.userForm)
     .subscribe({
       next: data => {
         alert ("Usuario registrado correctamente");
-        console.log(data);
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 500);
       },  
       error: error => {
         alert("No puede registrarse con ese Email.");
-        console.log(error);
       }
     });
   }
