@@ -14,7 +14,7 @@ article{
     flex-wrap: wrap;
     flex-direction: column;
     width: 25%;
-    height: 25rem;
+    height: 30rem;
     background-color: black;
     padding: 3rem;
     margin-top: 3rem;
@@ -80,6 +80,8 @@ article{
 }
 
 #sendRegister{
+    display: flex;
+    justify-content: center;
     padding-top: 2rem;
 }
 
