@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service'
+import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   };
 
 
-  constructor(private UserService:UserService) { }
+  constructor(private UserService:UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +23,12 @@ export class LoginComponent implements OnInit {
   sendLogin(){
     this.UserService.loginUser(this.loginForm)
     .subscribe({
-      next: data => console.log(data),
+      next: data => {
+        console.log(data),
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 500);
+      },
       error: error => alert("No ha sido posible encontrarle, revise sus datos.")
     })
   }
