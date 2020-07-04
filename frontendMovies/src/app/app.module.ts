@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BillboardComponent } from './billboard/billboard.component';
@@ -20,6 +20,9 @@ import { ZGenerationCollectionComponent } from './z-generation-collection/z-gene
 import { SearchedFilmsComponent } from './searched-films/searched-films.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+
+
 
 
 @NgModule({
@@ -48,7 +51,13 @@ import { ProfileComponent } from './profile/profile.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

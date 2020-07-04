@@ -15,23 +15,31 @@ export class UserService {
   private user: User;
   
   constructor(private HttpClient:HttpClient) { }
-
+    // For registering an user
   userRegister(form:object){
     return this.HttpClient.post(this.backendURL + "signup", form);
   }
-
+    // For logging an user
   loginUser(credentials: Credentials):Observable<Login>{
     return this.HttpClient.post<Login>(this.backendURL + "login", credentials)
   }
-
+    // For deleting an user
   deleteRegister(form:object){
     return this.HttpClient.post(this.backendURL + "drop", form);
   }
-
+    // For setting and getting an user in the service
   setUser(user: User): void {
     this.user = user;
   }
   getUser(): User {
     return this.user;
+  }
+    // For logging out user
+  logout(): void {
+    this.HttpClient.get(this.backendURL + 'logout' )
+    .subscribe(console.log);
+    this.setUser(null);
+    localStorage.removeItem('user');
+    localStorage.removeItem('authToken');
   }
 }
