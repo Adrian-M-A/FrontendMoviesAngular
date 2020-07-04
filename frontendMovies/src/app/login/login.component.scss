@@ -1,3 +1,5 @@
+// Build from outside to inside, from top to botton
+
 #loginBody{
     display: flex;
     justify-content: center;
@@ -13,10 +15,10 @@ article{
     text-align: center;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 25%;
+    width: 35%;
     height: 25rem;
     background-color: black;
-    padding: 3rem;
+    padding: 2rem;
     margin-top: 3rem;
     color: white;
     font-weight: bolder;
@@ -24,23 +26,32 @@ article{
     border-radius: 1rem;
 }
 
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
 #loginMessage{
     color:rgb(0, 247, 185);
     font-size: x-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 #firstLine, #secondLine{
     display: flex;
+    justify-content: center;
 }
 
+#secondLine{
+    margin-top: 2rem;
+}
 
 #email, #password{
-    display: flex;
-    flex-direction: column;
-    height: 2rem;
-    padding: 1rem;
+    margin-left: -0.5rem;
+    height: 1.5rem;
     width: 15rem
 }
 
@@ -66,3 +77,12 @@ article{
     }
 }
 
+#loginImage{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+img{
+    height: 100%;
+}

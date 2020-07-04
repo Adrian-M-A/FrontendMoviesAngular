@@ -1,19 +1,25 @@
+
 <section id="loginBody">
     <article id="login">
-        <div id="loginMessage">Introduce tus datos
-        </div> 
-        <div id="firstLine">
-            <div id="email">
-                <input type="email" name="emailInput" id="email" placeholder="Introduce tu email" Required [(ngModel)]="loginForm.Email">
+        <form id="loginForm" #loginForm="ngForm" (submit)="sendLogin(loginForm)">
+            <div id="loginMessage">Introduce tus datos
+            </div> 
+            <div id="firstLine">
+                <div id="email">
+                    <input type="email" name="Email" ngModel id="email" placeholder="Introduce tu email" Required>
+                </div>
             </div>
-        </div>
-        <div id="secondLine">
-            <div id="password">
-                <input type="password" name="passwordInput" id="password" placeholder="Introduce tu contraseña" Required [(ngModel)]="loginForm.Password">
+            <div id="secondLine">
+                <div id="password">
+                    <input type="password" name="Password" ngModel id="password" placeholder="Introduce tu contraseña" Required>
+                </div>
             </div>
+            <div id="sendLogin">
+                    <button type="submit" id="loginButton">Entrar</button>
+            </div>
+        </form>
+        <div id="loginImage">
+            <img src="../../assets/img/hero-gift.png" alt="Imagen de login">
         </div>
-        <div id="sendLogin">
-                <button type="submit" id="loginButton" (click)="sendLogin()">Entrar</button>
-        </div> 
     </article>
 </section>
