@@ -16,6 +16,6 @@
     </div>
     <div class="userZone" *ngIf="getUser() as user">
         <a routerLink="profile" id="userName"> Bienvenido {{user.Name}}</a>
-        <a (click)="logout()" id="logout">Logout</a>
+        <a (click)="logout()" id="logoutHeader">Logout</a>
     </div>
 </div>

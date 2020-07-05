@@ -1,45 +1,45 @@
 <section id="registerBody">
-    <article id="register">
-        <div id="registerMessage">Rellena tus datos para registrarte
-        </div> 
-        <div id="firstLine">
-            <div id="name">
-                <input type="text" id="inputName" placeholder="Nombre" Required [(ngModel)]="userForm.Name">
-            </div>
-            <div id="surnames">
-                <input type="text" placeholder="Apellidos" Required [(ngModel)]="userForm.Surnames">
-            </div>
-        </div>
-        <div id="secondLine">
-            <div id="date">Fecha de nacimiento
-                <div id="dateSelector">
-                    <input type="date" name="birthdate" value="2000-06-22" Required [(ngModel)]="userForm.Birthdate">
+    <article>
+        <form id="registerForm" #registerForm="ngForm" (submit)="sendRegister(registerForm)"> 
+            <div id="registerMessage">Rellena tus datos para registrarte
+            </div> 
+            <div id="firstLine">
+                <div id="name">
+                    <input type="text" id="inputName" placeholder="Nombre" Required ngModel name="Name">
+                </div>
+                <div id="surnames">
+                    <input type="text" placeholder="Apellidos" Required ngModel name="Surnames">
                 </div>
             </div>
-            <div id="document">
-                <input type="text" placeholder="Documento de identificación" Required [(ngModel)]="userForm.Document"> 
+            <div id="secondLine">
+                <div id="date">Fecha de nacimiento
+                    <div id="dateSelector">
+                        <input type="date" name="birthdate" value="2000-06-22" Required ngModel name="Birthdate">
+                    </div>
+                </div>
+                <div id="document">
+                    <input type="text" placeholder="Documento de identificación" Required ngModel name="Document"> 
+                </div>
             </div>
-        </div>
-        <div id="thirdLine">
-            <div id="phone">
-                <input type="text" placeholder="Teléfono" Required [(ngModel)]="userForm.Phone"> 
+            <div id="thirdLine">
+                <div id="phone">
+                    <input type="text" placeholder="Teléfono" Required ngModel name="Phone"> 
+                </div>
+                <div id="email">
+                    <input type="email" placeholder="Email" Required ngModel name="Email">
+                </div>
             </div>
-            <div id="email">
-                <input type="text" placeholder="Email" Required [(ngModel)]="userForm.Email">
+            <div id="fourthLine">
+                <div id="password"> 
+                    <input type="password" placeholder="Contraseña" Required ngModel name="Password"> 
+                </div>
+                <div id="password2">
+                    <input type="password" placeholder="Repite tu contraseña" Required name="Password2"> 
+                </div>
             </div>
-        </div>
-        <div id="fourthLine">
-            <div id="password"> 
-                <input type="text" placeholder="Contraseña" Required [(ngModel)]="userForm.Password"> 
-            </div>
-            <div id="password2">
-                <input type="text" placeholder="Repite tu contraseña" Required [(ngModel)]="Password2"> 
-            </div>
-        </div>
-        <div id="sendRegister">
-            <button type="submit" id="registerButton" (click)="sendRegister()">REGÍSTRATE</button>
-                <!-- p id="registerOK" *ngIf="" >Se ha registrado con éxito</p>
-                <p id="registerWrong" *ngIf="" >Se ha registrado con éxito</p> -->
-        </div>       
+            <div id="sendRegister">
+                <button type="submit" id="registerButton">REGÍSTRATE</button>
+            </div>       
+        </form>
     </article>
 </section>
