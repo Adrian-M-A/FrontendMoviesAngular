@@ -43,4 +43,8 @@ export class UserService {
     localStorage.removeItem('user');
     localStorage.removeItem('authToken');
   }
+
+  modifyUser(modUser:User):Observable<User>{
+    return this.HttpClient.put<User>(this.backendURL + 'update', modUser)
+  }
 }

@@ -14,7 +14,7 @@ export class OrderService {
   backendURL="http://localhost:3000/orders/";
   private order: object;
 
-  constructor(private HttpClient: HttpClient, private filmService: FilmService) { }
+  constructor(private HttpClient: HttpClient) { }
 
   
 
