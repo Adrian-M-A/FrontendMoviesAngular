@@ -52,6 +52,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+    
   ],
   providers: [
     {

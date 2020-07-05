@@ -6,6 +6,7 @@ import { Login } from '../interfaces/login';
 import { Observable } from 'rxjs'
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,8 +17,8 @@ export class UserService {
   
   constructor(private HttpClient:HttpClient) { }
     // For registering an user
-  userRegister(form:object){
-    return this.HttpClient.post(this.backendURL + "signup", form);
+  userRegister(form:object):Observable<User>{
+    return this.HttpClient.post<User>(this.backendURL + "signup", form);
   }
     // For logging an user
   loginUser(credentials: Credentials):Observable<Login>{
@@ -36,7 +37,7 @@ export class UserService {
   }
     // For logging out user
   logout(): void {
-    this.HttpClient.get(this.backendURL + 'logout' )
+    this.HttpClient.get(this.backendURL + 'logout')
     .subscribe(console.log);
     this.setUser(null);
     localStorage.removeItem('user');
