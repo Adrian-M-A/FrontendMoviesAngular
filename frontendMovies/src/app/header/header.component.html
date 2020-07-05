@@ -4,7 +4,7 @@
         <a routerLink="/" routerLinkActive="active-link">
             Inicio    
         </a>
-        <a routerLink="/collections" routerLinkActive="active-link">Colecciones</a>
+        <a routerLink="collections" routerLinkActive="active-link">Colecciones</a>
     </div>
     <div id="buscaTitulo">
         <input type="text" placeholder="Busca tu película" (keyup)="searchTitle($event)">
@@ -16,6 +16,6 @@
     </div>
     <div class="userZone" *ngIf="getUser() as user">
         <a routerLink="profile" id="userName"> Bienvenido {{user.Name}}</a>
-        <a (click)="logout()" id="logoutHeader">Logout</a>
+        <a routerLink="login"(click)="logout()" id="logoutHeader">Logout</a>
     </div>
 </div>

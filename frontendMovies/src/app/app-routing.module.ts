@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BillboardComponent } from './billboard/billboard.component' 
-import { CollectionsComponent } from "./collections/collections.component"
-import { PopularCollectionComponent} from "./popular-collection/popular-collection.component"
-import { VotedCollectionComponent} from './voted-collection/voted-collection.component'
-import { ComedyCollectionComponent } from "./comedy-collection/comedy-collection.component"
-import { EightyCollectionComponent } from "./eighty-collection/eighty-collection.component"
-import { NinetyCollectionComponent } from "./ninety-collection/ninety-collection.component"
-import { ZGenerationCollectionComponent } from "./z-generation-collection/z-generation-collection.component"
-import { SearchedFilmsComponent } from "./searched-films/searched-films.component"
-import { RegisterComponent } from "./register/register.component"
-import { LoginComponent } from "./login/login.component"
-import { AdminComponent } from './admin/admin.component'
-import { DetailFilmComponent } from './detail-film/detail-film.component'
+import { BillboardComponent } from './billboard/billboard.component'; 
+import { CollectionsComponent } from "./collections/collections.component";
+import { PopularCollectionComponent} from "./popular-collection/popular-collection.component";
+import { VotedCollectionComponent} from './voted-collection/voted-collection.component';
+import { ComedyCollectionComponent } from "./comedy-collection/comedy-collection.component";
+import { EightyCollectionComponent } from "./eighty-collection/eighty-collection.component";
+import { NinetyCollectionComponent } from "./ninety-collection/ninety-collection.component";
+import { ZGenerationCollectionComponent } from "./z-generation-collection/z-generation-collection.component";
+import { SearchedFilmsComponent } from "./searched-films/searched-films.component";
+import { RegisterComponent } from "./register/register.component";
+import { LoginComponent } from "./login/login.component";
+import { AdminComponent } from './admin/admin.component';
+import { DetailFilmComponent } from './detail-film/detail-film.component';
+import { ProfileComponent} from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:"searchedfilms", component:SearchedFilmsComponent},
   {path:"login", component:LoginComponent},
   {path:"admin", component:AdminComponent},
-  {path:"detailfilm", component:DetailFilmComponent}  
+  {path:"detailfilm", component:DetailFilmComponent},
+  {path:"profile", component:ProfileComponent}  
 ];
 
 @NgModule({

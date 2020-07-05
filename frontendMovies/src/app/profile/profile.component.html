@@ -1,40 +1,78 @@
-<!-- <section id="profileBody">
-    <article id="profile">
-        <div id="ProfileMessage">Tus datos de usuario
-        </div> 
-        <div id="firstLine">
-            <div id="name">Nombre
-                <input type="text" id="inputName" placeholder="Nombre" [(ngModel)]="userForm.Name">
-            </div>
-            <div id="surnames">Apellidos
-                <input type="text" placeholder="Apellidos" [(ngModel)]="userForm.Surnames">
-            </div>
-        </div>
-        <div id="secondLine">
-            <div id="date">Fecha de nacimiento
-                <div id="dateSelector">
-                    <input type="date" name="birthdate" value="2000-06-22" [(ngModel)]="userForm.Birthdate">
+<section id="profileBody">
+    <article id="profileData">
+        <form id="profileForm" #modForm="ngForm" (submit)="sendModification(modForm)"> 
+            <div id="profileMessage">Tus datos de usuario
+            </div> 
+            <div id="firstLine">
+                <div id="name">Nombre
+                    <input type="text" id="inputName" placeholder="Nombre" Required name="Name" [(ngModel)]="user.Name">
+                </div>
+                <div id="surnames">Apellidos
+                    <input type="text" placeholder="Apellidos" Required name="Surnames" [(ngModel)]="user.Surnames">
                 </div>
             </div>
-            <div id="document">Documento de indentidad
-                <input type="text" placeholder="Documento de identificación" [(ngModel)]="userForm.Document"> 
+            <div id="secondLine">
+                <div id="date">Fecha de nacimiento
+                    <div id="dateSelector">
+                        <input id="dateInput" type="date" name="birthdate" Required name="Birthadte" [(ngModel)]="user.Birthdate">
+                    </div>
+                </div>
+                <div id="document">Doc. de identidad
+                    <input type="text" placeholder="Documento de identificación" Required name="Document" [(ngModel)]="user.Document"> 
+                </div>
             </div>
-        </div>
-        <div id="thirdLine">
-            <div id="phone">Teléfono
-                <input type="text" placeholder="Teléfono" [(ngModel)]="userForm.Phone"> 
+            <div id="thirdLine">
+                <div id="phone">Teléfono
+                    <input type="text" placeholder="Teléfono" Required name="Phone" [(ngModel)]="user.Phone"> 
+                </div>
+                <div id="email">Email
+                    <input type="email" placeholder="Email" Required name="Email" [(ngModel)]="user.Email">
+                </div>
             </div>
-            <div id="email">Email
-                <input type="text" placeholder="Email" [(ngModel)]="userForm.Email">
+            <div id="fourthLine">
+                <div id="password"> Password
+                    <input type="password" placeholder="Contraseña" Required name="Password" [(ngModel)]="user.Password"> 
+                </div>
             </div>
-        </div>
-        <div id="fourthLine">
-            <div id="password">Contraseña
-                <input type="text" placeholder="Contraseña" [(ngModel)]="userForm.Password"> 
-            </div>
-        </div>
-        <div id="sendModifications">
-            <button type="submit" id="modifyButton" (click)="sendRegister()">Modificar</button>
-        </div>       
+            <div id="sendModification">
+                <button routerLink="/" id="acceptButton">Aceptar</button>
+                <button type="submit" id="ModButton">Modificar</button>
+            </div>       
+        </form>
     </article>
-</section> -->
+    <article id="orderData">
+            <div id="profileMessage">Tus pedidos
+            </div> 
+            <div id="firstLine">
+                <div id="name">Nombre
+                    <input type="text" id="inputName" placeholder="Nombre" Required name="Name" [(ngModel)]="user.Name">
+                </div>
+                <div id="surnames">Apellidos
+                    <input type="text" placeholder="Apellidos" Required name="Surnames" [(ngModel)]="user.Surnames">
+                </div>
+            </div>
+            <div id="secondLine">
+                <div id="date">Fecha de nacimiento
+                    <div id="dateSelector">
+                        <input id="dateInput" type="date" name="birthdate" Required name="Birthadte" [(ngModel)]="user.Birthdate">
+                    </div>
+                </div>
+                <div id="document">Doc. de identidad
+                    <input type="text" placeholder="Documento de identificación" Required name="Document" [(ngModel)]="user.Document"> 
+                </div>
+            </div>
+            <div id="thirdLine">
+                <div id="phone">Teléfono
+                    <input type="text" placeholder="Teléfono" Required name="Phone" [(ngModel)]="user.Phone"> 
+                </div>
+                <div id="email">Email
+                    <input type="email" placeholder="Email" Required name="Email" [(ngModel)]="user.Email">
+                </div>
+            </div>
+            <div id="fourthLine">
+                <div id="password"> Password
+                    <input type="password" placeholder="Contraseña" Required name="Password" [(ngModel)]="user.Password"> 
+                </div>
+            </div>     
+    </article>
+</section>
