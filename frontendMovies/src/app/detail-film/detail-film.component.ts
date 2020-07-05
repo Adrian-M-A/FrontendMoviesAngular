@@ -24,16 +24,16 @@ export class DetailFilmComponent implements OnInit {
     this.filmService.setChoosenFilm(film);
   }
 
-  rentFilm(filmId:Number):void{
+  rentFilm():void{
     const userData:User = JSON.parse(localStorage.getItem("user"));
    
     let today = new Date();
     let tomorrow = new Date();
-    tomorrow.setDate(today.getDate()+7);
+    tomorrow.setDate(today.getDate()+1);
 
     const order:Order = {
       UserId: userData.id,
-      FilmId: filmId,
+      FilmId: this.choosenFilm.id,
       OrderDate: today,
       Devolution: tomorrow,
       Price: 2.95,

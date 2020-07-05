@@ -12,7 +12,7 @@ import { User } from '../models/user.model';
 export class OrderService {
 
   backendURL="http://localhost:3000/orders/";
-
+  private order: object;
 
   constructor(private HttpClient: HttpClient, private filmService: FilmService) { }
 
@@ -20,6 +20,8 @@ export class OrderService {
 
   createOrder(order:Order){
     this.HttpClient.post(this.backendURL + "create", order)
-    .subscribe(console.log)
+    .subscribe(res => {
+      this.order = res;
+    })
   }
 }
