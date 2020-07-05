@@ -1,0 +1,67 @@
+.bodyDetail{
+    display: flex;
+    justify-content: center;
+    height: 45rem;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+}
+
+#filmDetail{
+    display: flex;
+    height: 35rem;
+    width: 75rem;
+    border: 1rem solid rgb(0, 247, 185);
+    border-radius: 1rem;
+    background-color: rgb(15, 15, 15);
+    margin-top: 3rem;
+
+    #filmImage{
+        display: flex;
+        justify-content: center;
+        width: 40%;
+        border-radius:0.7rem;
+        background-color: rgb(15, 15, 15);
+
+        img{
+            width: 75%;
+        }
+    }
+
+    #filmInfo{
+        width: 60%;
+        background-color:  rgb(15, 15, 15);
+
+    }
+}
+p{
+    color: rgb(1, 206, 155);
+    font-weight: bolder;
+
+    span{
+        color: white;
+    }
+}
+
+#overview{
+    color:white;
+    text-align: justify;
+    padding: 1rem;
+}
+
+#rentButton{
+    margin-right:1rem ;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+    font-weight: bolder;
+    border: 0rem solid rgb(92, 92, 92);
+    background-color: rgb(0, 247, 185);
+    color: black;
+    margin-top: 1rem;
+    cursor:pointer;
+
+    &:hover{
+        color: white;
+    }
+}

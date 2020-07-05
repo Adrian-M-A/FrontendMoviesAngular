@@ -20,6 +20,7 @@ import { ZGenerationCollectionComponent } from './z-generation-collection/z-gene
 import { SearchedFilmsComponent } from './searched-films/searched-films.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DetailFilmComponent } from './detail-film/detail-film.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ProfileComponent } from './profile/profile.component';
     ZGenerationCollectionComponent,
     SearchedFilmsComponent,
     AdminComponent,
-    ProfileComponent
+    ProfileComponent,
+    DetailFilmComponent
     
   ],
   imports: [
