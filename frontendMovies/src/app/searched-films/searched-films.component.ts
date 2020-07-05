@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../services/movie.service';
+import { FilmService } from '../services/movie.service';
 
 @Component({
   selector: 'app-searched-films',
@@ -8,7 +8,7 @@ import { MovieService } from '../services/movie.service';
 })
 export class SearchedFilmsComponent implements OnInit {
 
-  constructor(public MovieService:MovieService) { }
+  constructor(public filmService:FilmService) { }
 
   ngOnInit() {}
 }

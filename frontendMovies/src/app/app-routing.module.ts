@@ -12,6 +12,7 @@ import { SearchedFilmsComponent } from "./searched-films/searched-films.componen
 import { RegisterComponent } from "./register/register.component"
 import { LoginComponent } from "./login/login.component"
 import { AdminComponent } from './admin/admin.component'
+import { DetailFilmComponent } from './detail-film/detail-film.component'
 
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:"zgenerationcollection", component:ZGenerationCollectionComponent},
   {path:"searchedfilms", component:SearchedFilmsComponent},
   {path:"login", component:LoginComponent},
-  {path:"admin", component:AdminComponent}
+  {path:"admin", component:AdminComponent},
+  {path:"detailfilm", component:DetailFilmComponent}  
 ];
 
 @NgModule({

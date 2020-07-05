@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Film } from '../models/film.model';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class MovieService {
+export class FilmService {
 
   backendURL="http://localhost:3000/film/";
   
-  films: object[];
-  choosenFilm: object[];
+  private films: object[];
+  private choosenFilm: Film;
 
   constructor(private HttpClient:HttpClient) { }
 
@@ -43,10 +44,12 @@ export class MovieService {
     return this.HttpClient.get(this.backendURL + "filmsTitle/" + title)
   }
 
-  locateFilm(filmChoose:object[]):object{
+  setChoosenFilm(filmChoose:Film){
     this.choosenFilm = filmChoose;
-    console.log(this.choosenFilm);
-    return;
+  }
+
+  getChoosenFilm():Film{
+    return this.choosenFilm;
   }
 
   setFilms(films:object[]):void{
