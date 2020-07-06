@@ -69,7 +69,7 @@ input{
 }
 
 #document{
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     width: 13rem;
 }
 
@@ -117,4 +117,44 @@ button{
         outline: none;
         text-decoration: none;
     }
+}
+
+#orderMessage{
+    color:black;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -20rem;
+    padding-bottom: 2rem;
+}
+
+#orderData{
+    display: flex;
+    align-content: flex-start;
+    width: 40%;
+}
+
+#orderInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#filmInfo, #orderDate, #orderDevolution, #orderDevolution, #priceInfo{
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+#poster{
+    display: flex;
+    justify-self: center;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 3rem;
+}
+
+#date, #devolution, #price{
+    display:flex;
+    margin-top: 1rem;
+    padding-top: 2rem;
 }

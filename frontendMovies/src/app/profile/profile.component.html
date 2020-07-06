@@ -41,38 +41,27 @@
         </form>
     </article>
     <article id="orderData">
-            <div id="profileMessage">Tus pedidos
+            <div id="orderMessage">Tus pedidos
             </div> 
-            <div id="firstLine">
-                <div id="name">Nombre
-                    <input type="text" id="inputName" placeholder="Nombre" Required name="Name" [(ngModel)]="user.Name">
+            <div id="orderInfo">
+                <div id="filmInfo">Película
+                    <img src="https://image.tmdb.org/t/p/w185/{{film.PosterPath}}" id="poster">
                 </div>
-                <div id="surnames">Apellidos
-                    <input type="text" placeholder="Apellidos" Required name="Surnames" [(ngModel)]="user.Surnames">
-                </div>
-            </div>
-            <div id="secondLine">
-                <div id="date">Fecha de nacimiento
-                    <div id="dateSelector">
-                        <input id="dateInput" type="date" name="birthdate" Required name="Birthadte" [(ngModel)]="user.Birthdate">
+                <div id="orderDate">Fecha pedido
+                    <div id="date">
+                        {{order.OrderDate | date }}
                     </div>
                 </div>
-                <div id="document">Doc. de identidad
-                    <input type="text" placeholder="Documento de identificación" Required name="Document" [(ngModel)]="user.Document"> 
+                <div id="orderDevolution">Fecha devolución
+                    <div id="devolution">
+                        {{order.Devolution | date }}
+                    </div>
+                </div>
+                <div id="priceInfo">Precio
+                    <div id="price">
+                        {{order.Price}}
+                    </div>
                 </div>
             </div>
-            <div id="thirdLine">
-                <div id="phone">Teléfono
-                    <input type="text" placeholder="Teléfono" Required name="Phone" [(ngModel)]="user.Phone"> 
-                </div>
-                <div id="email">Email
-                    <input type="email" placeholder="Email" Required name="Email" [(ngModel)]="user.Email">
-                </div>
-            </div>
-            <div id="fourthLine">
-                <div id="password"> Password
-                    <input type="password" placeholder="Contraseña" Required name="Password" [(ngModel)]="user.Password"> 
-                </div>
-            </div>     
     </article>
 </section>

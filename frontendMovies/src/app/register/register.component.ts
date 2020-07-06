@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   
-  Password2:string;
+  password2:string = "";
 
   constructor(private UserService:UserService, private router:Router) { }
 
@@ -18,8 +18,8 @@ export class RegisterComponent implements OnInit {
   }
 
   sendRegister(registerForm:NgForm):void{
-    if (registerForm.value.Password == this.Password2){
-      this.UserService.userRegister(registerForm.value)
+
+    this.UserService.userRegister(registerForm.value)
     .subscribe({
       next: data => {
         alert ("Usuario registrado correctamente");
@@ -31,10 +31,5 @@ export class RegisterComponent implements OnInit {
         alert("No puede registrarse con ese Email.");
       }
     });
-    } else {
-      alert ("Las contraseñas no coinciden.")
-      this.Password2 = "";
-    }
-    
   }
 }
