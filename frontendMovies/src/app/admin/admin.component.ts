@@ -11,5 +11,5 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+    // Component without use, for the moment
 }

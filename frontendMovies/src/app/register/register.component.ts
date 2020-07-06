@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from "../services/user.service";
 import { Router } from "@angular/router";
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -8,26 +9,17 @@ import { Router } from "@angular/router";
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  userForm = {
-    Name: "",
-    Surnames:"",
-    Birthdate:"",
-    Document:"",
-    Phone:"",
-    Email:"",
-    Password:"",
-    Role:"user"
-  };
-  Password2:string;
+  
+  password2:string = "";
 
   constructor(private UserService:UserService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  sendRegister(){
-    console.log(this.userForm)
-    this.UserService.userRegister(this.userForm)
+  sendRegister(registerForm:NgForm):void{
+      // Send the form to the service
+    this.UserService.userRegister(registerForm.value)
     .subscribe({
       next: data => {
         alert ("Usuario registrado correctamente");

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from "../services/movie.service"
+import { FilmService } from "../services/movie.service"
 @Component({
   selector: 'app-voted-collection',
   templateUrl: './voted-collection.component.html',
@@ -7,14 +7,15 @@ import { MovieService } from "../services/movie.service"
 })
 export class VotedCollectionComponent implements OnInit {
   
-  showMovies: object;
+  showFilms: object;
 
-  constructor(public MovieService:MovieService) { }
+  constructor(public filmService:FilmService) { }
 
   ngOnInit(): void {
-    this.MovieService.getVotedFilms()
+        // Gets voted films
+    this.filmService.getVotedFilms()
     .subscribe(
-      res => this.showMovies = res,
+      res => this.showFilms = res,
       error => console.error(error)
     )
   }

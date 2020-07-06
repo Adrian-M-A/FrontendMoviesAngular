@@ -14,6 +14,7 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:focus {
@@ -54,10 +55,14 @@ input{
     font-size: small;
     border: 0rem solid rgb(92, 92, 92);
     background-color: rgb(0, 247, 185);
-    color: black
+    color: black;
+
+    &:focus, &:hover{
+        color: white;
+    }
 }
 
-#registroNavegador:focus, #registroNavegador:hover{
-    color: white;
+#logoutHeader{
+    cursor: pointer;
 }
 

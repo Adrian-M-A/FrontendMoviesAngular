@@ -2,13 +2,13 @@
     <h3>Cartelera</h3>
     <p id="subtitle">Todas nuestras películas</p>
     <div class="movies">
-        <div *ngFor="let pelicula of showMovies" class="movie">
-            <a routerLink="/detail" routerLinkActive="active-link">
-            <img width="200"height="288" (click)="MovieService.locateFilm(pelicula)"
-                src="https://image.tmdb.org/t/p/w200{{pelicula.PosterPath}}" 
+        <div *ngFor="let film of showFilms" class="movie">
+            <a routerLink="/detailfilm" routerLinkActive="active-link">
+            <img width="200"height="288" (click)="filmService.setChoosenFilm(film)"
+                src="https://image.tmdb.org/t/p/w200{{film.PosterPath}}" 
                 alt="poster">
             </a>
-            <p>{{pelicula.Title}}</p>
+            <p>{{film.Title}}</p>
         </div>
     </div>
 </div>

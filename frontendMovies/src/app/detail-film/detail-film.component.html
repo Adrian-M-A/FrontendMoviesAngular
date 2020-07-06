@@ -1,0 +1,19 @@
+<section class="bodyDetail">
+    <article id="filmDetail">
+        <div id="filmImage">
+           <img src="https://image.tmdb.org/t/p/w185/{{choosenFilm.PosterPath}}" alt="Poster película"> 
+        </div>
+        <div id="filmInfo">
+            <p>Título: <span>{{choosenFilm.Title}}</span></p>
+            <p>Fechas de estreno: <span>{{choosenFilm.ReleaseDate | date:'y'}}</span></p>
+            <p>Nota: <span>{{choosenFilm.VoteAverage}}</span></p>
+            <p>Sinopsis:</p>
+                <div id="overview">{{choosenFilm.Overview}}
+                </div>
+            
+            <p>Precio/día: <span>2,90€</span></p>
+            <button type="submit" id="rentButton1" (click)="rentFilm(1)">Alquilar 1 día</button>
+            <button type="submit" id="rentButton2" (click)="rentFilm(3)">Alquilar 3 días</button>
+        </div>
+    </article>
+</section>

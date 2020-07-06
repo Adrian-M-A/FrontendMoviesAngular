@@ -4,14 +4,18 @@
         <a routerLink="/" routerLinkActive="active-link">
             Inicio    
         </a>
-        <a routerLink="/collections" routerLinkActive="active-link">Colecciones</a>
+        <a routerLink="collections" routerLinkActive="active-link">Colecciones</a>
     </div>
     <div id="buscaTitulo">
         <input type="text" placeholder="Busca tu película" (keyup)="searchTitle($event)">
         <a id="buscaLink" routerLink="/searchedfilms" routerLinkActive="active-link">BUSCAR</a>
     </div>
-        <div id="registerLinks" *ngIf="!getUser()">    
+    <div id="registerLinks" *ngIf="!getUser()">    
         <a id="registroNavegador" routerLink="/register" routerLinkActive="active-link">REGÍSTRATE</a>
         <a id="entraLink" routerLink="/login" routerLinkActive="active-link">ENTRA</a>
+    </div>
+    <div class="userZone" *ngIf="getUser() as user">
+        <a routerLink="profile" id="userName"> Bienvenido {{user.Name}}</a>
+        <a routerLink="login"(click)="logout()" id="logoutHeader">Logout</a>
     </div>
 </div>

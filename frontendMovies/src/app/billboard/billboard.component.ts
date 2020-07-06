@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService} from '../services/movie.service'
+import { FilmService} from '../services/movie.service'
+import { Film } from '../models/film.model';
 
 @Component({
   selector: 'app-billboard',
@@ -8,15 +9,15 @@ import { MovieService} from '../services/movie.service'
 })
 export class BillboardComponent implements OnInit {
 
-    showMovies: object;
+    showFilms: Film[];
 
-    constructor(public MovieService:MovieService) { }
+    constructor(public filmService:FilmService) { }
 
-    //Al inicio del componente llama al servicio para realizar la función getFilms y conectar con Endpoint que ofrece todas las películas
+    //Get all the films to show in the billboard
   ngOnInit(){
-    this.MovieService.getAllFilms()
+    this.filmService.getAllFilms()
     .subscribe(
-      res => this.showMovies = res,
+      res => this.showFilms = res,
       error => console.error(error)
     )
   }

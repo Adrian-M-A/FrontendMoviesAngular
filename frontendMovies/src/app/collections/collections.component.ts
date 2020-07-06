@@ -11,5 +11,5 @@ export class CollectionsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+    // A component that shows the available collections 
 }

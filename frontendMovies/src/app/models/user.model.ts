@@ -1,4 +1,5 @@
 export interface User {
+    id: Number,
     Name: String
     Surnames: String,
     Birthdate: Date,

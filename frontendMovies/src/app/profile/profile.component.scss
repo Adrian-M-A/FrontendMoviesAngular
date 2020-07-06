@@ -14,18 +14,18 @@ article{
     flex-wrap: wrap;
     flex-direction: column;
     width: 25%;
-    height: 25rem;
-    background-color: black;
+    height: 30rem;
+    background-color: white;
     padding: 3rem;
     margin-top: 3rem;
-    color: white;
+    color: black;
     font-weight: bolder;
     border: 1rem solid rgb(0, 247, 185);
     border-radius: 1rem;
 }
 
 #profileMessage{
-    color:rgb(0, 247, 185);
+    color:black;
     font-size: x-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 2rem;
@@ -33,6 +33,11 @@ article{
 
 #firstLine, #secondLine, #thirdLine, #fourthLine{
     display: flex;
+    margin-top: 0.5rem;
+}
+
+input{
+    margin-top: 0.5rem;
 }
 
 #name, #surnames, #date, #document, 
@@ -41,6 +46,8 @@ article{
     flex-direction: column;
     height: 2rem;
     padding: 1rem;
+    color:black;
+    margin-top: 1rem;
 }
 
 #name{
@@ -53,11 +60,16 @@ article{
 }
 
 #date {
+    margin-top: 0.5rem;
     width: 12rem;   
+}
+#dateInput{
+    height: 2rem;
+    justify-content: center;
 }
 
 #document{
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     width: 13rem;
 }
 
@@ -67,7 +79,7 @@ article{
 
 #email{
     padding-left: 2rem;
-    width: 15rem
+    width: 15rem;
 }
 
 #password {
@@ -79,11 +91,18 @@ article{
     width: 10rem;
 }
 
-#sendModifications{
+button{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+#sendModification{
+    display: flex;
+    justify-content: center;
     padding-top: 2rem;
 }
 
-#modifyButton{
+#modButton{
     margin-right:1rem ;
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -92,11 +111,50 @@ article{
     font-weight: bolder;
     border: 0.15rem solid rgb(0, 247, 185);
     background-color: rgb(0, 247, 185);
+    &:hover, &:focus, &:active {
+        background-color: black;
+        color:white;
+        outline: none;
+        text-decoration: none;
+    }
 }
 
-#registerButton:hover, #registerButton:focus, #registerButton:active {
-    background-color: black;
-    color:white;
-    outline: none;
-    text-decoration: none;
+#orderMessage{
+    color:black;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -20rem;
+    padding-bottom: 2rem;
+}
+
+#orderData{
+    display: flex;
+    align-content: flex-start;
+    width: 40%;
+}
+
+#orderInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#filmInfo, #orderDate, #orderDevolution, #orderDevolution, #priceInfo{
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+#poster{
+    display: flex;
+    justify-self: center;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 3rem;
+}
+
+#date, #devolution, #price{
+    display:flex;
+    margin-top: 1rem;
+    padding-top: 2rem;
 }

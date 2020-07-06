@@ -2,13 +2,13 @@
     <h3>Búsqueda</h3>
     <p id="subtitle">El resultado de tu búsqueda es:</p>
     <div class="movies">
-        <div *ngFor="let pelicula of MovieService.getFilms()" class="movie">
-            <a routerLink="/info" routerLinkActive="active-link">
-                <img width="200"height="288" (click)="MovieService.locateFilm(pelicula)"
-                src="https://image.tmdb.org/t/p/w200/{{pelicula.PosterPath}}" 
+        <div *ngFor="let film of filmService.getFilms()" class="movie">
+            <a routerLink="/detailfilm" routerLinkActive="active-link">
+                <img width="200"height="288" (click)="filmService.setChoosenFilm(film)"
+                src="https://image.tmdb.org/t/p/w200/{{film.PosterPath}}" 
                 alt="poster">
             </a>
-            <p>{{pelicula.Title}}</p>
+            <p>{{film.Title}}</p>
         </div>
     </div>
 </div>

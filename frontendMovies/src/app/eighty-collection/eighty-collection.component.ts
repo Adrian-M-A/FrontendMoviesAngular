@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService} from '../services/movie.service';
+import { FilmService} from '../services/movie.service';
 
 @Component({
   selector: 'app-eighty-collection',
@@ -8,14 +8,14 @@ import { MovieService} from '../services/movie.service';
 })
 export class EightyCollectionComponent implements OnInit {
 
-  showMovies: object;
+  showFilms: object;
 
-  constructor(public MovieService:MovieService) { }
-
+  constructor(public filmService:FilmService) { }
+    // For getting films from 80s
   ngOnInit(): void {
-    this.MovieService.getEigthyFilms()
+    this.filmService.getEigthyFilms()
     .subscribe(
-      res => this.showMovies = res,
+      res => this.showFilms = res,
       error => console.error(error)
     )
   }

@@ -11,15 +11,14 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService:UserService, private router: Router) { }
+  constructor(private userService:UserService, private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  // Sends the information for login
   sendLogin(loginForm: NgForm):void{
     if (loginForm.valid){
       const credentials: Credentials = loginForm.value;
-      console.log(credentials)
       this.userService.loginUser(credentials)
         .subscribe(res => {
           localStorage.setItem('authToken', res.token);
@@ -27,8 +26,8 @@ export class LoginComponent implements OnInit {
           this.userService.setUser(res.user);
           setTimeout(() => {
             this.router.navigate(['/']);
-          }, 1500);
-        }, error => alert("No ha sido posible encontrarle, revise sus datos.")
+          }, 500);
+        }, error => alert("Email o contraseña mal introducidos.")
         );
     }
   }
