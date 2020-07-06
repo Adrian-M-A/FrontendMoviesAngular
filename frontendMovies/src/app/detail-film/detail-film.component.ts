@@ -37,7 +37,7 @@ export class DetailFilmComponent implements OnInit {
       FilmId: this.choosenFilm.id,
       OrderDate: today,
       Devolution: tomorrow,
-      Price: 2.90 * day,
+      Price: 2.9 * day,
       Days: day
     }
   
