@@ -4,6 +4,7 @@ import { Film } from '../models/film.model';
 import { OrderService } from '../services/order.service';
 import { User } from '../models/user.model';
 import { Order } from '../models/order.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail-film',
@@ -14,7 +15,7 @@ export class DetailFilmComponent implements OnInit {
 
   choosenFilm: Film;
 
-  constructor(private filmService:FilmService, private orderService: OrderService) { }
+  constructor(private filmService:FilmService, private orderService: OrderService, private router:Router) { }
 
   ngOnInit(): void {
     this.choosenFilm = this.filmService.getChoosenFilm();
@@ -41,5 +42,8 @@ export class DetailFilmComponent implements OnInit {
     }
   
     this.orderService.createOrder(order);
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 50);
   }
 }
