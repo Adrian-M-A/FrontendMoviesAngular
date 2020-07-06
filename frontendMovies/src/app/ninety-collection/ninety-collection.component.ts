@@ -11,7 +11,7 @@ export class NinetyCollectionComponent implements OnInit {
   showFilms: object;
 
   constructor(public filmService:FilmService) { }
-
+  // Gets films form 90s
   ngOnInit(): void {
     this.filmService.getNinetyFilms()
     .subscribe(

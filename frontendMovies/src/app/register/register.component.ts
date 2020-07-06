@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
   sendRegister(registerForm:NgForm):void{
-
+      // Send the form to the service
     this.UserService.userRegister(registerForm.value)
     .subscribe({
       next: data => {

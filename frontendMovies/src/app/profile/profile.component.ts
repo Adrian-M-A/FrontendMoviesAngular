@@ -21,11 +21,13 @@ export class ProfileComponent implements OnInit {
   constructor(private userSevice:UserService, private orderService: OrderService, private filmService: FilmService) { }
 
   ngOnInit(): void {
+    // Initialize variables when init to show the profile and order state
     this.user = this.userSevice.getUser();
     this.order = this.orderService.getOrder();
     this.film = this.filmService.getChoosenFilm();
+    
   }
-
+    // Sends notifications about user
   sendModification(profileForm: NgForm){
     const dataUpdate = profileForm.value;
     this.userSevice.modifyUser(dataUpdate)

@@ -13,19 +13,20 @@ export class OrderService {
 
   backendURL="http://localhost:3000/orders/";
   
-  private order: Order;
-  private createdOrder: object;
+  private dataOrder: Order;
 
   constructor(private HttpClient: HttpClient) { }
-
-  createOrder(order:Order){
-    this.HttpClient.post(this.backendURL + "create", order)
-    .subscribe(res => {
-      this.createdOrder = res;
-    })
+    // Creates the order
+  createOrder(order:Order):Observable<Order>{
+    return this.HttpClient.post<Order>(this.backendURL + "create", order)
+  }
+    // Sets the order here, in the service
+  setOrder(order:Order):void{ 
+    this.dataOrder = order;
   }
 
+    // Gets the order's information
   getOrder():Order{
-    return this.order
+    return this.dataOrder;
   }
 }

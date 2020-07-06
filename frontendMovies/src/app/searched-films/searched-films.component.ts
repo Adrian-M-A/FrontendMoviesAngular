@@ -12,3 +12,5 @@ export class SearchedFilmsComponent implements OnInit {
 
   ngOnInit() {}
 }
+
+  // A component to show the film searched

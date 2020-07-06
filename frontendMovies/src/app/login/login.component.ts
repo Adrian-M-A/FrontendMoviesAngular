@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // Sends the information for login
   sendLogin(loginForm: NgForm):void{
     if (loginForm.valid){
       const credentials: Credentials = loginForm.value;

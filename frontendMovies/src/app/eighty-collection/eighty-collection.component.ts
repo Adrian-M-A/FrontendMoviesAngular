@@ -11,7 +11,7 @@ export class EightyCollectionComponent implements OnInit {
   showFilms: object;
 
   constructor(public filmService:FilmService) { }
-
+    // For getting films from 80s
   ngOnInit(): void {
     this.filmService.getEigthyFilms()
     .subscribe(

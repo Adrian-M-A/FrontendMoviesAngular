@@ -11,7 +11,7 @@ export class PopularCollectionComponent implements OnInit {
   showFilms: object;
 
   constructor(public filmService:FilmService) { }
-
+  // Gets popular films
   ngOnInit(): void {
     this.filmService.getPopularFilms()
     .subscribe(

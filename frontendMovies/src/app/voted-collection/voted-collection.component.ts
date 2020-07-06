@@ -12,6 +12,7 @@ export class VotedCollectionComponent implements OnInit {
   constructor(public filmService:FilmService) { }
 
   ngOnInit(): void {
+        // Gets voted films
     this.filmService.getVotedFilms()
     .subscribe(
       res => this.showFilms = res,

@@ -12,6 +12,7 @@ export class ZGenerationCollectionComponent implements OnInit {
   constructor(public filmService:FilmService) { }
 
   ngOnInit(): void {
+    // Gets films from 2000 till now
     this.filmService.getZGenerationFilms()
     .subscribe(
       res => this.showFilms = res,

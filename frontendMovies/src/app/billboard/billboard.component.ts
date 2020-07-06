@@ -13,7 +13,7 @@ export class BillboardComponent implements OnInit {
 
     constructor(public filmService:FilmService) { }
 
-    //Al inicio del componente llama al servicio para realizar la función getFilms y conectar con Endpoint que ofrece todas las películas
+    //Get all the films to show in the billboard
   ngOnInit(){
     this.filmService.getAllFilms()
     .subscribe(

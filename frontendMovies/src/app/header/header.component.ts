@@ -14,18 +14,18 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  searchTitle(event){//en esta funcion guardamos lo que tecleamos por el input referenciado con el titulo y la url de la pelicula para compararlos
-    if(event.target.value.length >= 2){//le decimos que se active cuando hayamos tecleado tres o mas teclas
+    // The function that searches the film looked for in the header's input
+  searchTitle(event){
+    if(event.target.value.length >= 2){
       this.filmService.searchFilmsTitle(event.target.value)
       .subscribe(res=>this.filmService.setFilms(res))
-      
     }
   }
-
+    // Gets user from the service
   getUser():User {
     return this.userService.getUser();
   }
-
+    // Logs out the user's data 
   logout(): void {
     this.userService.logout();
   }
